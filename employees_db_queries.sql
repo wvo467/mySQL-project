@@ -31,3 +31,10 @@ ON dept_emp.dept_no = departments.dept_no;
 /* List all employees whose first name is "Hercules" and last name begins with "B"
 SELECT first_name, last_name FROM employees WHERE first_name = 'Hercules' AND last_name LIKE 'B%';
 */
+
+/* List frequency count of employee last names in decending order	
+SELECT DISTINCT last_name,  COUNT(last_name) AS Count
+FROM employees
+GROUP BY last_name
+ORDER BY count DESC
+*/	
